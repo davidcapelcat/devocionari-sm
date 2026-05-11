@@ -13,7 +13,6 @@
 
     <style>
         :root {
-            /* Paleta French Country */
             --primary-color: #A6B4A7; 
             --accent-color: #C1CBD1; 
             --bg-color: #F0EFEB; 
@@ -73,10 +72,7 @@
             padding: 0.6rem 1rem;
             border-radius: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: background-color 0.2s;
         }
-
-        .back-btn:active { background-color: #E2DCC9; }
 
         .font-controls {
             display: flex;
@@ -94,14 +90,12 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: 0.9rem;
-            cursor: pointer;
             width: 38px;
             height: 38px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
         }
 
         .font-controls button.active {
@@ -131,39 +125,32 @@
         }
 
         .prayer-title {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--primary-color);
             margin-top: 0;
             margin-bottom: 1rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
         }
-
-        .prayer-title i { color: #9AA7AF; }
 
         .prayer-text {
             font-size: 1.05rem;
             line-height: 1.7;
-            color: var(--text-color);
-            margin: 0;
             white-space: pre-wrap; 
         }
         
-        .amen { font-weight: 600; font-style: italic; }
         .versicle { font-weight: 700; color: var(--primary-color); }
         .response { font-weight: 700; color: #4a4a4a; }
-        
+        .instruction { font-style: italic; color: #7f8c8d; font-size: 0.95rem; display: block; margin: 0.5rem 0; }
+        .consecration { font-weight: 700; text-transform: uppercase; }
+
     </style>
 </head>
 <body>
 
     <header>
         <h1>La Santa Missa</h1>
-        <p class="subtitle">Parròquia Sant Miquel de La Cava</p>
+        <p class="subtitle">Ordinari de la celebració</p>
     </header>
 
     <main>
@@ -178,24 +165,21 @@
             </div>
         </div>
 
-        <div class="section-title">Abans de la Missa</div>
+        <div class="section-title">Inici de la celebració</div>
         
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-hands-praying"></i> Preparació (St. Tomàs)</h2>
-            <p class="prayer-text">Oh Déu omnipotent i sempitern!, heus aquí que m'atanso al Sagrament del vostre Fill Unigènit, Jesucrist Senyor nostre.
-Hi vinc com malalt al metge de la vida, com un leprós a la font de misericòrdia, com cec a la llum de claredat eterna, com un pobre i desvalgut al Senyor de cels i terra.
-Imploro, doncs, a la vostra infinita bondat i misericòrdia, per tal que us digneu a sanar la meva malaltia, netejar la meva brutícia, aclarir la meva ceguesa, enriquir la meva pobresa i vestir la meva nuesa, perquè així pugui jo rebre el Pa dels àngels, el Rei dels Reis, el Senyor dels qui dominen, amb tanta reverència i humilitat com convé per a la salut de la meva ànima. <span class="amen">Amén.</span></p>
-        </article>
+            <h2 class="prayer-title">Salutació i Acte Penitencial</h2>
+            <p class="prayer-text"><span class="versicle">V.</span> En el nom del Pare i del Fill i de l'Esperit Sant.
+<span class="response">R.</span> Amén.
 
-        <div class="section-title">Respostes de la Missa</div>
-
-        <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-church"></i> Ritus Inicials</h2>
-            <p class="prayer-text"><span class="versicle">V.</span> El Senyor sigui amb vosaltres.
+<span class="versicle">V.</span> Que la gràcia de nostre Senyor Jesucrist, l'amor de Déu Pare i la comunió de l'Esperit Sant siguin amb tots vosaltres.
 <span class="response">R.</span> I amb el vostre esperit.
 
-<span class="versicle">V.</span> Germans, reconeguem els nostres pecats...
-<span class="response">R.</span> Jo confesso a Déu totpoderós, i a vosaltres germans, que he pecat, per culpa meva, de pensament, paraula, obra i omissió. Per això demano a la Verge Maria, Mare de Déu, als àngels i als sants, i a vosaltres, germans, que pregueu per mi a Déu, nostre Senyor.
+<span class="instruction">Acte Penitencial:</span>
+Jo confesso a Déu totpoderós i a vosaltres, germans, que he pecat, per culpa meva, de pensament, paraula, obra i omissió. Per això, demano a la Verge Maria, Mare de Déu, als àngels i als sants, i a vosaltres, germans, que pregueu per mi a Déu, nostre Senyor.
+
+<span class="versicle">V.</span> Que Déu omnipotent s'apiadi de nosaltres, ens perdoni els pecats i ens dugui a la vida eterna.
+<span class="response">R.</span> Amén.
 
 <span class="versicle">V.</span> Senyor, tingueu pietat.
 <span class="response">R.</span> Senyor, tingueu pietat.
@@ -204,74 +188,101 @@ Imploro, doncs, a la vostra infinita bondat i misericòrdia, per tal que us dign
         </article>
 
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-book-bible"></i> Litúrgia de la Paraula</h2>
-            <p class="prayer-text"><i>Al final de la 1a i 2a lectura:</i>
-<span class="versicle">V.</span> Paraula de Déu.
-<span class="response">R.</span> Us lloem, Senyor.
+            <h2 class="prayer-title">Glòria</h2>
+            <p class="prayer-text">Glòria a Déu a dalt del cel, i a la terra pau als homes que estima el Senyor. Us lloem, us beneïm, us adorem, us glorifiquem, us donem gràcies, per la vostra immensa glòria, Senyor Déu, Rei celestial, Déu Pare omnipotent. 
 
-<i>Abans de l'Evangeli:</i>
-<span class="versicle">V.</span> Lectura de l'Evangeli segons sant...
-<span class="response">R.</span> Glòria a vós, Senyor.
+Senyor, Fill unigènit, Jesucrist, Senyor Déu, Anyell de Déu, Fill del Pare, vós, que lleveu el pecat del món, tingueu pietat de nosaltres; vós, que lleveu el pecat del món, acolliu la nostra súplica, vós que seieu a la dreta del Pare, tingueu pietat de nosaltres. 
 
-<i>Al final de l'Evangeli:</i>
-<span class="versicle">V.</span> Paraula del Senyor.
-<span class="response">R.</span> Lloança a vós, oh Crist.</p>
+Perquè vós sou l'únic Sant, vós l'únic Senyor, vós l'únic Altíssim, Jesucrist, amb l'Esperit Sant, en la glòria de Déu Pare. Amén.</p>
         </article>
 
+        <div class="section-title">Litúrgia de la Paraula</div>
+
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-wine-glass"></i> Litúrgia Eucarística</h2>
-            <p class="prayer-text"><span class="versicle">V.</span> Pregueu, germans, perquè aquest sacrifici, meu i vostre, sigui agradable a Déu, Pare totpoderós.
-<span class="response">R.</span> Que el Senyor rebi de les vostres mans aquest sacrifici, a lloança i glòria del seu nom, i també per al nostre bé i el de tota la seva santa Església.
+            <p class="prayer-text"><span class="instruction">Després de l'Homilia:</span>
+<span class="instruction">Professió de fe (Credo):</span>
+Crec en un sol Déu, Pare totpoderós, creador del cel i de la terra, de totes les coses visibles i invisibles.
+
+I en un sol Senyor, Jesucrist, Fill Unigènit de Déu, nascut del Pare abans de tots els segles. Déu nat de Déu, Llum resplendor de la Llum, Déu veritable nascut del Déu veritable, engendrat, no pas creat, de la mateixa naturalesa del Pare: per ell tota cosa fou creada. El qual per nosaltres, els homes, i per la nostra salvació davallà del cel. I, per obra de l'Esperit Sant, s'encarnà de la Verge Maria, i es féu home.
+
+Crucificat després per nosaltres sota el poder de Ponç Pilat; patí i fou sepultat, i ressuscità el tercer dia, com deien ja les Escriptures, i se'n pujà al cel, on seu a la dreta del Pare. I tornarà gloriós a judicar els vius i els morts, i el seu regnat no tindrà fi.
+
+Crec en l'Esperit Sant, que és Senyor i infon la vida, que procedeix del Pare i del Fill. I juntament amb el Pare i el Fill és adorat i glorificat; que parlà per boca dels profetes.
+
+I en una sola Església, santa, catòlica i apostòlica. Professo que hi ha un sol baptisme per perdonar el pecat. I espero la resurrecció dels morts, i la vida de la glòria. Amén.</p>
+        </article>
+
+        <div class="section-title">Litúrgia Eucarística</div>
+
+        <article class="prayer-card">
+            <h2 class="prayer-title">Presentació de les Ofrenes</h2>
+            <p class="prayer-text"><span class="instruction">Presentació del Pa:</span>
+Us beneïm, Senyor, Déu de l'univers, per aquest pa que hem rebut de la vostra bondat i que és fruit de la terra i del treball del homes el presentem perquè es converteixi per a nosaltres en pa de vida.
+<span class="response">R.</span> Que Déu sigui beneït per sempre.
+
+<span class="instruction">Presentació del Vi:</span>
+Us beneïm, Senyor, Déu de l'univers, per aquest vi que hem rebut de la vostra bondat i que és fruit de la vinya i del treball del homes el presentem perquè es converteixi per a nosaltres en beguda espiritual.
+<span class="response">R.</span> Que Déu sigui beneït per sempre.
 
 <span class="versicle">V.</span> El Senyor sigui amb vosaltres.
 <span class="response">R.</span> I amb el vostre esperit.
-<span class="versicle">V.</span> Amunt els cors.
+<span class="versicle">V.</span> Amunt el cors.
 <span class="response">R.</span> Els elevem al Senyor.
 <span class="versicle">V.</span> Donem gràcies al Senyor, Déu nostre.
-<span class="response">R.</span> És just i necessari.
+<span class="response">R.</span> Cal fer-ho i és de justícia.</p>
+        </article>
 
-<span class="response">Tots:</span> Sant, Sant, Sant és el Senyor, Déu de l'univers. El cel i la terra són plens de la vostra glòria. Hosanna a dalt del cel. Beneït el qui ve en nom del Senyor. Hosanna a dalt del cel.
+        <article class="prayer-card">
+            <h2 class="prayer-title">Pregària Eucarística II</h2>
+            <p class="prayer-text">Sou realment sant, Senyor, font de tota santedat. Santifiqueu, doncs, aquestes ofrenes fent que hi davalli el vostre Esperit, com la rosada, perquè es converteixin per a nosaltres en el Cos i en la Sang de Jesucrist, nostre Senyor.
 
-<i>Després de la Consagració:</i>
+Ell, en oferir-se lliurement a la passió, prengué el pa i, dient l'acció de gràcies, el partí, i el donà als seus deixebles, tot dient:
+<span class="consecration">Preneu i mengeu-ne tots, que això és el meu cos, entregat per vosaltres.</span>
+
+Igualment, havent sopat, prengué el calze, i, novament donant-vos gràcies, el passà als seus deixebles, tot dient:
+<span class="consecration">Preneu i beveu-ne tots, que aquest és el calze de la meva sang, la sang de l'aliança nova i eterna, vessada per vosaltres i per tots els homes, en remissió dels pecats. Feu això que és el meu memorial.</span>
+
 <span class="versicle">V.</span> Proclameu el misteri de la fe.
-<span class="response">R.</span> Anunciem la vostra mort, confessem la vostra resurrecció, esperem el vostre retorn, Senyor Jesús!</p>
+<span class="response">R.</span> Anunciem la vostra mort, confessem la vostra resurrecció esperem el vostre retorn, Senyor Jesús.</p>
         </article>
 
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-bread-slice"></i> Ritu de la Comunió</h2>
-            <p class="prayer-text"><span class="versicle">V.</span> La pau del Senyor sigui sempre amb vosaltres.
+            <h2 class="prayer-title">Pregària Eucarística III</h2>
+            <p class="prayer-text">Vós sou realment sant, Déu i Pare nostre... Ell mateix, el vespre en què el van trair, prengué el pa i, donant-vos gràcies i beneint-vos, el partí i el donà als seus deixebles, tot dient:
+<span class="consecration">Preneu i mengeu-ne tots, que això és el meu cos, entregat per vosaltres.</span>
+
+Igualment, havent sopat, prengué el calze i, donant-vos gràcies i beneint-vos, el passà als seus deixebles, tot dient:
+<span class="consecration">Preneu i beveu-ne tots, que aquest és el calze de la meva sang, la sang de l'aliança nova i eterna, vessada per vosaltres i per tots els homes, en remissió dels pecats. Feu això que és el meu memorial.</span></p>
+        </article>
+
+        <div class="section-title">Ritus de la Comunió</div>
+
+        <article class="prayer-card">
+            <h2 class="prayer-title">Parenostre i Ritu de la pau</h2>
+            <p class="prayer-text">Pare nostre, que esteu en el cel: Sigui santificat el vostre nom. Vingui a nosaltres el vostre Regne. Faci's la vostra voluntat, així a la terra com es fa en el cel. El nostre pa de cada dia doneu-nos, Senyor, el dia d'avui. I perdoneu les nostres culpes, així com nosaltres perdonem els nostres deutors. I no permeteu que nosaltres caiguem a la temptació. Ans deslliureu-nos de qualsevol mal.
+
+<span class="versicle">V.</span> Allibereu-nos, Senyor de tots els mals...
+<span class="response">R.</span> Perquè són vostres, per sempre, el regne, el poder i la glòria.
+
+<span class="versicle">V.</span> La pau del Senyor sigui amb vosaltres.
 <span class="response">R.</span> I amb el vostre esperit.
+<span class="versicle">V.</span> Doneu-vos la pau.
 
-<span class="response">Tots:</span> Anyell de Déu, que lleveu el pecat del món, tingueu pietat de nosaltres. (x2)
-Anyell de Déu, que lleveu el pecat del món, doneu-nos la pau.
-
-<span class="versicle">V.</span> Mireu l'Anyell de Déu... Feliços els convidats a la seva taula.
-<span class="response">R.</span> Senyor, no sóc digne que entreu a casa meva; digueu-ho només de paraula i serà salva la meva ànima.</p>
+<span class="instruction">Anyell de Déu:</span>
+Anyell de Déu, que lleveu el pecat del món, tingueu pietat de nosaltres. (x2)
+Anyell de Déu, que lleveu el pecat del món, doneu-nos la pau.</p>
         </article>
 
-        <div class="section-title">Després de Combregar</div>
+        <div class="section-title">Ritus de conclusió</div>
 
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-heart"></i> Ànima de Crist</h2>
-            <p class="prayer-text">Ànima de Crist, santifiqueu-me.
-Cos de Crist, salveu-me.
-Sang de Crist, embriagueu-me.
-Aigua del costat de Crist, renteu-me.
-Passió de Crist, conforteu-me.
-O bon Jesús, oïu-me!
-Dins les vostres ferides, amagueu-me.
-No permeteu que em separi de Vós.
-De l'enemic maligne, defenseu-me.
-A l'hora de la mort, crideu-me.
-I feu-me anar a Vós.
-Perquè amb els vostres sants us lloï pels segles dels segles. <span class="amen">Amén.</span></p>
+            <p class="prayer-text"><span class="versicle">V.</span> El Senyor sigui amb vosaltres.
+<span class="response">R.</span> I amb el vostre esperit.
+<span class="versicle">V.</span> Que un beneeixi Déu Pare totpoderós, Pare, Fill i Esperit Sant.
+<span class="response">R.</span> Amén.
+<span class="versicle">V.</span> Germans, aneu-vos-en en pau.
+<span class="response">R.</span> Donem gràcies a Déu.</p>
         </article>
-
-        <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-cross"></i> A Jesús Crucificat</h2>
-            <p class="prayer-text">Mireu-me, oh amat i bon Jesús!, prostrat a la vostra presència: us demano amb el més gran fervor que imprimiu en el meu cor sentiments de fe, d'esperança i de caritat, dolor dels meus pecats i ferm propòsit de no ofendre-us mai més: mentre que jo amb gran amor i compassió vaig considerant les vostres cinc llagues, començant per allò que digué de Vós, oh Déu meu, el sant profeta David: Han traspassat les meves mans i els meus peus, i es poden comptar tots els meus ossos. <span class="amen">Amén.</span></p>
-        </article>
-
     </main>
 
     <script>
