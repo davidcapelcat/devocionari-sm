@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Oracions Bàsiques - Devocionari</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Paleta de colors French Country */
+            --primary-color: #A6B4A7; /* Verd sàlvia */
+            --accent-color: #C1CBD1; /* Blau grisós */
+            --bg-color: #F0EFEB; /* Blanc trencat */
+            --text-color: #333333; /* Gris fosc */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            margin: 0.5rem 0 0 0;
+            font-size: 0.9rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        main {
+            padding: 1.5rem 1rem;
+            max-width: 500px; 
+            margin: 0 auto;
+        }
+
+        /* Botó per tornar enrere */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            background: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .back-btn:active {
+            background-color: #E2DCC9;
+        }
+
+        /* Estil per a les targetes de cada oració */
+        .prayer-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .prayer-title {
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .prayer-title i {
+            color: #9AA7AF; /* To de la paleta ajustat per a icones */
+        }
+
+        .prayer-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin: 0;
+            /* Això és clau: respecta els salts de línia del codi HTML sense haver de posar <br> */
+            white-space: pre-wrap; 
+        }
+        
+        .amen {
+            font-weight: 600;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Oracions Bàsiques</h1>
+        <p class="subtitle">Parròquia Sant Miquel de La Cava</p>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Tornar a l'índex
+        </a>
+        
+        <article class="prayer-card">
+            <h2 class="prayer-title"><i class="fa-solid fa-cross"></i> El Senyal de la Creu</h2>
+            <p class="prayer-text">Per la senyal de la santa creu, 
+dels nostres enemics deslliureu-nos, Senyor, Déu nostre.
+En el nom del Pare i del Fill i de l'Esperit Sant.
+<span class="amen">Amén.</span></p>
+        </article>
+
+        <article class="prayer-card">
+            <h2 class="prayer-title"><i class="fa-solid fa-hands-praying"></i> El Pare Nostre</h2>
+            <p class="prayer-text">Pare nostre, que esteu en el cel:
+Sigui santificat el vostre nom.
+Vingui a nosaltres el vostre regne.
+Faci's la vostra voluntat,
+així a la terra com es fa en el cel.
+El nostre pa de cada dia,
+doneu-nos, Senyor, el dia d'avui.
+I perdoneu les nostres culpes,
+així com nosaltres perdonem els nostres deutors.
+I no permeteu que nosaltres caiguem a la temptació,
+ans deslliureu-nos de qualsevol mal.
+<span class="amen">Amén.</span></p>
+        </article>
+
+        <article class="prayer-card">
+            <h2 class="prayer-title"><i class="fa-solid fa-rose"></i> L'Au Maria</h2>
+            <p class="prayer-text">Déu vos salve, Maria,
+plena de gràcia;
+el Senyor és amb vós;
+beneïda sou vós entre totes les dones,
+i beneït és el fruit del vostre ventre, Jesús.
+Santa Maria, Mare de Déu,
+pregueu per nosaltres, pecadors,
+ara i en l'hora de la nostra mort.
+<span class="amen">Amén.</span></p>
+        </article>
+
+        <article class="prayer-card">
+            <h2 class="prayer-title"><i class="fa-solid fa-sun"></i> El Glòria</h2>
+            <p class="prayer-text">Glòria al Pare i al Fill i a l'Esperit Sant.
+Com era al principi, ara i sempre
+i pels segles dels segles.
+<span class="amen">Amén.</span></p>
+        </article>
+
+        <article class="prayer-card">
+            <h2 class="prayer-title"><i class="fa-solid fa-book-open"></i> El Credo</h2>
+            <p class="prayer-text">Crec en Déu, Pare totpoderós,
+creador del cel i de la terra.
+I en Jesucrist, únic Fill seu, Senyor nostre;
+el qual fou concebut per obra de l'Esperit Sant,
+nasqué de Maria Verge;
+patí sota el poder de Ponç Pilat,
+fou crucificat, mort i sepultat;
+davallà als inferns,
+el tercer dia ressuscità d'entre els morts;
+pujà al cel,
+seu a la dreta de Déu, Pare totpoderós;
+i d'allí ha de venir a judicar els vius i els morts.
+Crec en l'Esperit Sant;
+la santa Església catòlica,
+la comunió dels sants;
+el perdó dels pecats;
+la resurrecció de la carn;
+la vida perdurable.
+<span class="amen">Amén.</span></p>
+        </article>
+
+    </main>
+
+</body>
+</html>
