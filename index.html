@@ -20,7 +20,7 @@
             --text-color: #333333; 
         }
 
-        /* Configuració de mides de lletra */
+        /* Configuració de mides de lletra per a l'accessibilitat */
         html {
             font-size: 16px;
             transition: font-size 0.3s ease;
@@ -41,13 +41,23 @@
             background-color: var(--primary-color);
             color: var(--text-color);
             text-align: center;
-            padding: 2.5rem 1rem;
+            padding: 2.5rem 1rem; /* Padding unificat */
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             border-bottom: 4px solid var(--accent-color);
         }
 
-        h1 { margin: 0; font-size: 1.8rem; font-weight: 700; }
-        .subtitle { margin: 0.5rem 0 0 0; font-size: 1rem; opacity: 0.8; }
+        h1 { 
+            margin: 0; 
+            font-size: 1.6rem; /* Mida unificada */
+            font-weight: 700; 
+        }
+
+        .subtitle { 
+            margin: 0.5rem 0 0 0; 
+            font-size: 0.95rem; /* Mida unificada */
+            font-weight: 400;
+            opacity: 0.8; 
+        }
 
         main {
             padding: 1.5rem 1rem;
@@ -55,10 +65,10 @@
             margin: 0 auto;
         }
 
-        /* Estils per a la barra de controls de font */
+        /* Barra de controls de font */
         .controls-bar {
             display: flex;
-            justify-content: flex-end; /* A l'índex només hi ha els botons de font */
+            justify-content: flex-end;
             margin-bottom: 1.5rem;
         }
 
