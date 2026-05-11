@@ -14,10 +14,24 @@
     <style>
         :root {
             /* Paleta de colors French Country */
-            --primary-color: #A6B4A7; /* Verd sàlvia */
-            --accent-color: #C1CBD1; /* Blau grisós */
-            --bg-color: #F0EFEB; /* Blanc trencat */
-            --text-color: #333333; /* Gris fosc */
+            --primary-color: #A6B4A7; 
+            --accent-color: #C1CBD1; 
+            --bg-color: #F0EFEB; 
+            --text-color: #333333; 
+        }
+
+        /* En canviar la mida de font de l'arrel (html), tota la pàgina creix proporcionalment */
+        html {
+            font-size: 16px; /* Mida Normal */
+            transition: font-size 0.3s ease;
+        }
+        
+        html.font-large {
+            font-size: 19px; /* Mida Gran */
+        }
+
+        html.font-xlarge {
+            font-size: 23px; /* Mida Molt Gran */
         }
 
         body {
@@ -56,7 +70,14 @@
             margin: 0 auto;
         }
 
-        /* Botó per tornar enrere */
+        /* Barra superior de controls */
+        .controls-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
         .back-btn {
             display: inline-flex;
             align-items: center;
@@ -66,10 +87,9 @@
             font-weight: 600;
             font-size: 0.95rem;
             background: white;
-            padding: 0.6rem 1.2rem;
+            padding: 0.6rem 1rem;
             border-radius: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 1.5rem;
             transition: background-color 0.2s;
         }
 
@@ -77,7 +97,38 @@
             background-color: #E2DCC9;
         }
 
-        /* Estil per a les targetes de cada oració */
+        /* Botons de mida de lletra */
+        .font-controls {
+            display: flex;
+            gap: 0.3rem;
+            background: white;
+            padding: 0.3rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .font-controls button {
+            border: none;
+            background: transparent;
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .font-controls button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
         .prayer-card {
             background: white;
             border-radius: 12px;
@@ -101,7 +152,7 @@
         }
 
         .prayer-title i {
-            color: #9AA7AF; /* To de la paleta ajustat per a icones */
+            color: #9AA7AF; 
         }
 
         .prayer-text {
@@ -109,7 +160,6 @@
             line-height: 1.7;
             color: var(--text-color);
             margin: 0;
-            /* Això és clau: respecta els salts de línia del codi HTML sense haver de posar <br> */
             white-space: pre-wrap; 
         }
         
@@ -127,79 +177,113 @@
     </header>
 
     <main>
-        <a href="index.html" class="back-btn">
-            <i class="fa-solid fa-arrow-left"></i> Tornar a l'índex
-        </a>
+        <div class="controls-bar">
+            <a href="index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i> Tornar
+            </a>
+            
+            <div class="font-controls">
+                <button onclick="changeFontSize('normal')" id="btn-normal">A</button>
+                <button onclick="changeFontSize('large')" id="btn-large">A+</button>
+                <button onclick="changeFontSize('xlarge')" id="btn-xlarge">A++</button>
+            </div>
+        </div>
         
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-cross"></i> El Senyal de la Creu</h2>
-            <p class="prayer-text">Per la senyal de la santa creu, 
-dels nostres enemics deslliureu-nos, Senyor, Déu nostre.
-En el nom del Pare i del Fill i de l'Esperit Sant.
-<span class="amen">Amén.</span></p>
+            <h2 class="prayer-title"><i class="fa-solid fa-cross"></i> Senyal de la Creu</h2>
+            <p class="prayer-text">En el nom del Pare i del Fill i de l'Esperit Sant. <span class="amen">Amén.</span></p>
         </article>
 
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-hands-praying"></i> El Pare Nostre</h2>
+            <h2 class="prayer-title"><i class="fa-solid fa-hands-praying"></i> Parenostre</h2>
             <p class="prayer-text">Pare nostre, que esteu en el cel:
-Sigui santificat el vostre nom.
-Vingui a nosaltres el vostre regne.
-Faci's la vostra voluntat,
+Sigui santificat el vostre nom;
+vingui a nosaltres el vostre Regne;
+faci's la vostra voluntat,
 així a la terra com es fa en el cel.
-El nostre pa de cada dia,
-doneu-nos, Senyor, el dia d'avui.
-I perdoneu les nostres culpes,
-així com nosaltres perdonem els nostres deutors.
-I no permeteu que nosaltres caiguem a la temptació,
-ans deslliureu-nos de qualsevol mal.
-<span class="amen">Amén.</span></p>
+El nostre pa de cada dia doneu-nos, Senyor, el dia d'avui;
+i perdoneu les nostres culpes, així com nosaltres perdonem els nostres deutors;
+i no permeteu que nosaltres caiguem a la temptació, ans deslliureu-nos de qualsevol mal. <span class="amen">Amén.</span></p>
         </article>
 
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-rose"></i> L'Au Maria</h2>
-            <p class="prayer-text">Déu vos salve, Maria,
-plena de gràcia;
-el Senyor és amb vós;
-beneïda sou vós entre totes les dones,
-i beneït és el fruit del vostre ventre, Jesús.
-Santa Maria, Mare de Déu,
-pregueu per nosaltres, pecadors,
-ara i en l'hora de la nostra mort.
-<span class="amen">Amén.</span></p>
+            <h2 class="prayer-title"><i class="fa-solid fa-rose"></i> Avemaria</h2>
+            <p class="prayer-text">Déu vos salve, Maria, plena de gràcia; el Senyor és amb vós.
+Beneïda sou vós entre totes les dones, i beneït és el fruit del vostre ventre, Jesús.
+Santa Maria, Mare de Déu, pregueu per nosaltres pecadors, ara i en l'hora de la nostra mort. <span class="amen">Amén.</span></p>
         </article>
 
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-sun"></i> El Glòria</h2>
+            <h2 class="prayer-title"><i class="fa-solid fa-sun"></i> Glòria al Pare</h2>
             <p class="prayer-text">Glòria al Pare i al Fill i a l'Esperit Sant.
-Com era al principi, ara i sempre
-i pels segles dels segles.
-<span class="amen">Amén.</span></p>
+Com era al principi, ara i sempre, i pels segles dels segles. <span class="amen">Amén.</span></p>
         </article>
 
         <article class="prayer-card">
-            <h2 class="prayer-title"><i class="fa-solid fa-book-open"></i> El Credo</h2>
-            <p class="prayer-text">Crec en Déu, Pare totpoderós,
-creador del cel i de la terra.
-I en Jesucrist, únic Fill seu, Senyor nostre;
-el qual fou concebut per obra de l'Esperit Sant,
-nasqué de Maria Verge;
-patí sota el poder de Ponç Pilat,
-fou crucificat, mort i sepultat;
-davallà als inferns,
-el tercer dia ressuscità d'entre els morts;
-pujà al cel,
-seu a la dreta de Déu, Pare totpoderós;
-i d'allí ha de venir a judicar els vius i els morts.
-Crec en l'Esperit Sant;
-la santa Església catòlica,
-la comunió dels sants;
-el perdó dels pecats;
-la resurrecció de la carn;
-la vida perdurable.
-<span class="amen">Amén.</span></p>
+            <h2 class="prayer-title"><i class="fa-solid fa-crown"></i> Salve</h2>
+            <p class="prayer-text">Déu vos salve, Reina i Mare de misericòrdia; vida, dolcesa i esperança nostra, Déu vos salve.
+A vós cridem els desterrats fills d'Eva; a vós sospirem, gemint i plorant en aquesta vall de llàgrimes.
+Ara, doncs, advocada nostra, gireu envers nosaltres aquests ulls vostres tan misericordiosos.
+I, després d'aquest exili, mostreu-nos Jesús, fruit beneït del vostre ventre.
+Oh clementíssima, oh piadosa, oh dolça Verge Maria.</p>
+        </article>
+
+        <article class="prayer-card">
+            <h2 class="prayer-title"><i class="fa-solid fa-heart"></i> Jo pecador</h2>
+            <p class="prayer-text">Jo confesso a Déu totpoderós, i a vosaltres germans, que he pecat, per culpa meva, de pensament, paraula, obra i omissió.
+Per això demano a la Verge Maria, Mare de Déu, als àngels i als sants, i a vosaltres, germans, que pregueu per mi a Déu, nostre Senyor.</p>
+        </article>
+
+        <article class="prayer-card">
+            <h2 class="prayer-title"><i class="fa-solid fa-book-open"></i> Símbol dels Apòstols</h2>
+            <p class="prayer-text">Crec en un Déu, Pare totpoderós, creador del cel i de la terra.
+I en Jesucrist, únic Fill seu i Senyor nostre; el qual fou concebut per obra de l'Esperit Sant, nasqué de Maria Verge;
+patí sota el poder de Ponç Pilat, fou crucificat, mort i sepultat;
+davallà als inferns, ressuscità el tercer dia d'entre els morts;
+se'n pujà al cel, seu a la dreta de Déu, Pare totpoderós;
+i d'allí ha de venir a jutjar els vius i els morts.
+Crec en l'Esperit Sant; la santa Mare Església catòlica; la comunió dels sants; la remissió dels pecats;
+la resurrecció de la carn; la vida perdurable. <span class="amen">Amén.</span></p>
+        </article>
+
+        <article class="prayer-card">
+            <h2 class="prayer-title"><i class="fa-solid fa-feather"></i> Àngel de Déu</h2>
+            <p class="prayer-text">Àngel de Déu, vós que sou custodi meu, a mi que sóc a vós encomanat per la celestial pietat, il·lumineu-me, guardeu-me, regiu-me i governeu-me. <span class="amen">Amén.</span></p>
         </article>
 
     </main>
+
+    <script>
+        function changeFontSize(size) {
+            const htmlEl = document.documentElement;
+            
+            // Netegem les classes de mida i deixem els botons inactius
+            htmlEl.classList.remove('font-large', 'font-xlarge');
+            document.getElementById('btn-normal').classList.remove('active');
+            document.getElementById('btn-large').classList.remove('active');
+            document.getElementById('btn-xlarge').classList.remove('active');
+
+            // Apliquem la classe corresponent i marquem el botó com actiu
+            if (size === 'large') {
+                htmlEl.classList.add('font-large');
+                document.getElementById('btn-large').classList.add('active');
+            } else if (size === 'xlarge') {
+                htmlEl.classList.add('font-xlarge');
+                document.getElementById('btn-xlarge').classList.add('active');
+            } else {
+                document.getElementById('btn-normal').classList.add('active');
+            }
+
+            // Guardem la preferència al navegador de l'usuari
+            localStorage.setItem('devocionari-font-size', size);
+        }
+
+        // Quan es carrega la pàgina, mirem si l'usuari tenia guardada alguna mida
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedSize = localStorage.getItem('devocionari-font-size') || 'normal';
+            changeFontSize(savedSize);
+        });
+    </script>
 
 </body>
 </html>
