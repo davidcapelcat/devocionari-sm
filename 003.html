@@ -38,27 +38,39 @@
         .amen { font-weight: 600; font-style: italic; }
     </style>
 </head>
-<body>
 
-    <he<body><header><h1>El Sant Rosari</h1><p class="subtitle">Parròquia Sant Miquel de La Cava</p></header><main><div class="controls-bar"><a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Tornar</a><div class="font-controls"><button onclick="changeFontSize('normal')" id="btn-normal">A</button><button onclick="changeFontSize('large')" id="btn-large">A+</button><button onclick="changeFontSize('xlarge')" id="btn-xlarge">A++</button></div></div><div class="section-title">Oracions de l'inici</div><article class="prayer-card" id="prayercard009"><h2 class="prayer-title"><i class="fa-solid fa-cross"></i> Credo de Nicea</h2><p class="prayer-text">Crec en un sol Déu, Pare totpoderós, creador del cel i de la terra... [Text complet del Credo]</p></article><div class="section-title">Misteris de cada dia</div><article class="prayer-card" id="prayercard010"><h2 class="prayer-title"><i class="fa-solid fa-lightbulb"></i> Dilluns i Dissabte</h2><p class="prayer-text"><span class="versicle">Misteris de Goig:</span> 
-1. L'Anunciació.
-2. La Visitació.
-3. El Naixement de Jesús.
-4. La Presentació.
-5. El Nen Jesús perdut i trobat al Temple.</p></article><article class="prayer-card" id="prayercard011"><h2 class="prayer-title"><i class="fa-solid fa-cloud-showers-heavy"></i> Dimarts i Divendres</h2><p class="prayer-text"><span class="versicle">Misteris de Dolor:</span> 
-1. L'Agonia a l'Hort.
-2. La Flagel·lació.
-3. La Coronació d'espines.
-4. Jesús amb la creu al coll.
-5. La Crucifixió i Mort.</p></article><article class="prayer-card" id="prayercard012"><h2 class="prayer-title"><i class="fa-solid fa-sun"></i> Dimecres i Diumenge</h2><p class="prayer-text"><span class="versicle">Misteris de Glòria:</span> 
-1. La Resurrecció.
-2. L'Ascensió.
-3. La vinguda de l'Esperit Sant.
-4. L'Assumpció de Maria.
-5. La Coronació de Maria.</p></article><article class="prayer-card" id="prayercard013"><h2 class="prayer-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Dijous</h2><p class="prayer-text"><span class="versicle">Misteris de Llum:</span> 
-1. El Baptisme de Jesús.
-2. Les noces de Canà.
-3. L'anunci del Regne de Déu.
-4. La Transfiguració.
-5. La Institució de l'Eucaristia.</p></article></main><script>function changeFontSize(size){const h=document.documentElement;h.classList.remove('font-large','font-xlarge');document.getElementById('btn-normal').classList.remove('active');document.getElementById('btn-large').classList.remove('active');document.getElementById('btn-xlarge').classList.remove('active');if(size==='large'){h.classList.add('font-large');document.getElementById('btn-large').classList.add('active')}else if(size==='xlarge'){h.classList.add('font-xlarge');document.getElementById('btn-xlarge').classList.add('active')}else{document.getElementById('btn-normal').classList.add('active')}localStorage.setItem('devocionari-font-size',size)}document.addEventListener('DOMContentLoaded',()=>{changeFontSize(localStorage.getItem('devocionari-font-size')||'normal')});</script></body>
+<body><header><h1>El Sant Rosari</h1><p class="subtitle">Parròquia Sant Miquel de La Cava</p></header><main><div class="controls-bar"><a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Tornar</a><div class="font-controls"><button onclick="changeFontSize('normal')" id="btn-normal">A</button><button onclick="changeFontSize('large')" id="btn-large">A+</button><button onclick="changeFontSize('xlarge')" id="btn-xlarge">A++</button></div></div><div class="section-title">Inici del Rosari</div><article class="prayer-card" id="prayercard014"><h2 class="prayer-title"><i class="fa-solid fa-cross"></i> Inici</h2><p class="prayer-text">Pel Senyal + de la santa Creu, dels nostres + enemics, deslliureu-nos, Senyor, + Déu nostre. En nom del Pare, i del Fill, + i de l'Esperit Sant. Amén.
+
+<span class="versicle">V.</span> Obriu-me els llavis, Senyor.
+<span class="response">R.</span> I proclamaré la vostra lloança.
+<span class="versicle">V.</span> Glòria al Pare i al Fill i a l'Esperit Sant.
+<span class="response">R.</span> Així com era al principi, ara i sempre, i pels segles dels segles. Amén.</p></article><article class="prayer-card" id="prayercard015"><h2 class="prayer-title"><i class="fa-solid fa-hands-holding"></i> Oferiment</h2><p class="prayer-text">Senyor Déu nostre, dirigiu i encamineu tots els nostres pensaments, paraules i obres a major honra i glòria vostra. I vós, Verge Santíssima, obtingueu-nos del vostre Fill que amb tota atenció i devoció puguem dir el vostre Santíssim Rosari, el qual us oferim per l'exaltació de la santa Fe catòlica, per les nostres necessitats espirituals i temporals, i pel bé i sufragi dels vius i difunts que siguin més del vostre grat i de la nostra principal obligació.</p></article><div class="section-title">Misteris segons el dia</div><article class="prayer-card" id="prayercard016"><h2 class="prayer-title"><i class="fa-solid fa-calendar-days"></i> Calendari de Misteris</h2><p class="prayer-text"><span class="versicle">Dilluns i Dissabte:</span> MISTERIS DE GOIG
+<span class="versicle">Dimarts i Divendres:</span> MISTERIS DE DOLOR
+<span class="versicle">Dimecres i Diumenge:</span> MISTERIS DE GLÒRIA
+<span class="versicle">Dijous:</span> MISTERIS DE LLUM</p></article><div class="section-title">Lletanies</div><article class="prayer-card" id="prayercard017"><h2 class="prayer-title"><i class="fa-solid fa-list-ul"></i> Lletanies Lauretanes</h2><p class="prayer-text"><span class="instruction">(Es poden resar en acabar els Misteris o soles)</span>
+<span class="versicle">V.</span> Senyor, tingueu pietat. <span class="response">R.</span> Senyor tingueu pietat.
+<span class="versicle">V.</span> Crist, tingueu pietat. <span class="response">R.</span> Crist, tingueu pietat.
+<span class="versicle">V.</span> Déu, Pare celestial. <span class="response">R.</span> Tingueu pietat de nosaltres.
+<span class="versicle">V.</span> Trinitat Santa, un sol Déu. <span class="response">R.</span> Tingueu pietat de nosaltres.
+
+Santa Maria, <span class="response">R. Pregueu per nosaltres.</span>
+Santa Mare de Déu, <span class="response">R.</span> ...
+Mare del Crist, <span class="response">R.</span> ...
+Mare de l'Església, <span class="response">R.</span> ...
+Mare de la misericòrdia, <span class="response">R.</span> ...
+Mare de la divina gràcia, <span class="response">R.</span> ...
+Mare de l'Esperança, <span class="response">R.</span> ...
+Rosa mística, <span class="response">R.</span> ...
+Torre de David, <span class="response">R.</span> ...
+Porta del cel, <span class="response">R.</span> ...
+Estel del matí, <span class="response">R.</span> ...
+Reina de la pau, <span class="response">R.</span> ...
+
+<span class="versicle">V.</span> Anyell de Déu que lleveu el pecat del món.
+<span class="response">R. Perdoneu-nos, Senyor.</span>
+<span class="versicle">V.</span> Anyell de Déu que lleveu el pecat del món.
+<span class="response">R. Escolteu-nos, Senyor.</span>
+<span class="versicle">V.</span> Anyell de Déu que lleveu el pecat del món.
+<span class="response">R. Tingueu pietat de nosaltres.</span></p></article><article class="prayer-card" id="prayercard018"><h2 class="prayer-title"><i class="fa-solid fa-check-double"></i> Oració Final</h2><p class="prayer-text">Concediu, Senyor Déu, als vostres servents que frueixin de salut perpètua en l’ànima i en el cos; i per la gloriosa intercessió de la benaurada sempre Verge Maria, siguin ara alliberats de tristesa, i gaudeixin després l’alegria eterna del cel. Us ho demanem per Crist, Senyor nostre. <span class="amen">Amén.</span></p></article></main><script>function changeFontSize(size){const h=document.documentElement;h.classList.remove('font-large','font-xlarge');document.getElementById('btn-normal').classList.remove('active');document.getElementById('btn-large').classList.remove('active');document.getElementById('btn-xlarge').classList.remove('active');if(size==='large'){h.classList.add('font-large');document.getElementById('btn-large').classList.add('active')}else if(size==='xlarge'){h.classList.add('font-xlarge');document.getElementById('btn-xlarge').classList.add('active')}else{document.getElementById('btn-normal').classList.add('active')}localStorage.setItem('devocionari-font-size',size)}document.addEventListener('DOMContentLoaded',()=>{changeFontSize(localStorage.getItem('devocionari-font-size')||'normal')});</script></body>
+    
 </html>
